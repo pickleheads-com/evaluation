@@ -2,14 +2,14 @@ import { db } from './db'
 
 import { Request, Response, NextFunction } from 'express'
 
-import jwt from 'jsonwebtoken'
+const jwt = require('jsonwebtoken')
 
-const getUserPerms = async (user: any): Promise<string[]> => {
-  const result = await ddb.scan({TableName:'users' }) .promise()
-  return result.Items?result.Items.map((e: any) => e.userPermissions.S as string) : []
+const getUserAllowedImages = async (user: any): Promise<string[]> => {
+	const result = await db.raw(`SELECT * FROM permissions WHERE user_id = ${user } AND allowed = 'true'`)
+	return result.map((e: any) => e.image_id as string)
 }
 
-const authenticateUser = async(token: any): Promise<string> => {
+const authenticateTheUser = (token: any): Promise<string> => {
   const parsed = jwt.decode(token)
   if (!parsed)
     throw new Error('Unauthorized')
@@ -17,23 +17,18 @@ const authenticateUser = async(token: any): Promise<string> => {
   return parsed.sub
 }
 
-// Validate that there's a permission 'catName:1' in the permissions for the user.
-const testPerm = async (perm: any, catName: any): Promise<any> =>{
-  return [...perm.matchAll(`/(${catName}):(\d)/g`)].map((e) => e[2]).filter((p) => p > 0).length > 0
-}
-
 const authorize = async (req: Request, res: Response, next: NextFunction) => {
-  var authHeader = req.headers['authentication']
-  if (!authHeader) {
+  var authHeader = req.headers["authentication"]
+  if(!authHeader) {
     return res.status(404)
   }
 
-  var token = authenticateUser(authHeader as string)
+  var token = authenticateTheUser(authHeader as string)
   if (!token) { return res.status(404) }
 
-  var perms = await getUserPerms(req.params.user)
-  for (var i = 0; i < perms.length; i++) {
-    if (testPerm(perms[i], req.params.catName))
+  var allowedIds = await getUserAllowedImages(req.params.user)
+  for (var i = 0; i < allowedIds.length; i++) {
+    if (allowedIds[i] == req.params.catName)
       return next()
   }
 
