@@ -28,7 +28,7 @@ The PR includes both backend and frontend components:
 - The backend portion contains the core authorization logic
 - The frontend portion in the `/web` directory implements the user interface for authentication and authorization features
 
-Important note: For the purposes of this review, treat the backend and frontend portions as completely separate projects that are not intended to connect with each other. The only thing they have in common is that they both relate to cats. Do not attempt to evaluate how they might integrate.
+Important note: For the purposes of this review, treat the backend and frontend portions as completely separate projects that are not intended to connect with each other. The only thing they have in common is that they both relate to cats and live in the same repository. Do not attempt to evaluate how they might integrate.
 
 When reviewing the PR, please allocate approximately 60% of your effort to the backend portion and 40% to the frontend portion. This balance reflects the relative importance and complexity of each component in the overall feature implementation.
 
