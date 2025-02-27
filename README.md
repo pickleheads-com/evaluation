@@ -35,6 +35,8 @@ When reviewing the PR, please allocate approximately 60% of your effort to the b
 If you need clarification or any additional context, please don't hesitate to
 email `review@pickleheads.com` and ask questions!
 
+**Important:** The use of AI tools (including chatbots, code completion, or text generation services) is strictly prohibited during this evaluation. Your submission should reflect your own expertise, judgment, and critical thinking abilities.
+
 _Note:_ This repository is not a fully functional project. Please pretend that
 the pull request is adding a feature to a much larger, fully functioning web
 application.
