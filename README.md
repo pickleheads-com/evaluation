@@ -8,8 +8,7 @@ the team has been growing to support the larger workload, including a few less
 experienced engineers that look to you for mentorship and technical leadership.
 
 You're about to go on vacation for a week in Bermuda and one of the junior
-engineers that you mentor has just completed adding user authorization. They've
-published a PR, with a description of the feature and it's requirements, and are
+engineers that you mentor has just completed adding user authorization and an unrelated frontend gallery and form component. They've published a PR, with a description of the feature and it's requirements, and are
 looking forward to your feedback.
 
 You really want them to do a good job, so you're going to give them a _really_
@@ -26,7 +25,7 @@ functional gaps, or non-idiomatic code.
 
 The PR includes both backend and frontend components:
 - The backend portion contains the core authorization logic
-- The frontend portion in the `/web` directory implements the user interface for authentication and authorization features
+- The frontend portion in the `/web` directory includes a gallery component and a form for submitting new images.
 
 Important note: For the purposes of this review, treat the backend and frontend portions as completely separate projects that are not intended to connect with each other. The only thing they have in common is that they both relate to cats and live in the same repository. Do not attempt to evaluate how they might integrate.
 
