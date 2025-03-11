@@ -18,7 +18,7 @@ detailed review so that by the time you get back the code is in good shape.
 
 This repository contains a sample PR for you to review. Please create your PR
 feedback in an document suitable for this junior engineer, and mail that
-document to `review@pickleheads.com`. You're welcome to follow existing PR
+document to `max@pickleheads.com`. You're welcome to follow existing PR
 guidelines, cite code snippets (quoting line numbers is generally sufficient),
 and refer to specific lines as you evaluate for syntax errors, inefficiencies,
 functional gaps, or non-idiomatic code.
@@ -32,7 +32,7 @@ Important note: For the purposes of this review, treat the backend and frontend 
 When reviewing the PR, please allocate approximately 60% of your effort to the backend portion and 40% to the frontend portion. This balance reflects the relative importance and complexity of each component in the overall feature implementation.
 
 If you need clarification or any additional context, please don't hesitate to
-email `review@pickleheads.com` and ask questions!
+email `max@pickleheads.com` and ask questions!
 
 **Important:** The use of AI tools (including chatbots, code completion, or text generation services) is strictly prohibited during this evaluation. Your submission should reflect your own expertise, judgment, and critical thinking abilities.
 
