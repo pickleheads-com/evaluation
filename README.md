@@ -1,5 +1,7 @@
 # Scenario
 
+#### PLEASE DO NOT REVIEW THE PR ON GITHUB. SEND AN EMAIL WITH YOUR REVIEW TO THE ADDRESS LISTED BELOW. 
+
 You are a principal engineer at I Eatz Sushi, the more upscale version of a
 historically relevant internet property. IES shows people funny pictures of cats
 dressed up like sushi. Or maybe it's sushi that looks like cats. You've never
